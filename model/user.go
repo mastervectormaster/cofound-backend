@@ -17,7 +17,7 @@ type User struct {
 
 func (u *User) HashPassword(plain string) (string, error) {
 	if len(plain) == 0 {
-		return "", errors.New("password should not be empty")
+		return "", errors.New("Password should not be empty")
 	}
 	h, err := bcrypt.GenerateFromPassword([]byte(plain), bcrypt.DefaultCost)
 	return string(h), err
