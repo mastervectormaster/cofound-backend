@@ -47,7 +47,7 @@ func (r *userUpdateRequest) bind(c *fiber.Ctx, u *model.User, v *Validator) erro
 type userRegisterRequest struct {
 	User struct {
 		Username string `json:"username" validate:"required"`
-		Email    string `json:"email" validate:"required, email"`
+		Email    string `json:"email" validate:"required,email"`
 		Password string `json:"password" validate:"required"`
 	} `json:"user"`
 }
